@@ -49,7 +49,7 @@ export class Graph {
     return this.edges.get(nodeId) || []
   }
 
-  // Dijkstra's Algorithm for shortest path
+  // creating a function for Dijkstra's Algorithm for shortest path
   dijkstra(startId: string, endId: string): RouteResult | null {
     const distances = new Map<string, number>()
     const previous = new Map<string, string | null>()
@@ -63,7 +63,7 @@ export class Graph {
     })
 
     while (unvisited.size > 0) {
-      // Find unvisited node with minimum distance
+      // Finding unvisited node with minimum distance
       let currentNode: string | null = null
       let minDistance = Number.POSITIVE_INFINITY
 
